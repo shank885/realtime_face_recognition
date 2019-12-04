@@ -105,3 +105,10 @@ Our realtime face recognition is able to recognize the faces of all the members 
   * run realtime_recognition.py.
   * It will be able to recognize the faces that are present in the database and will mark a face unknown if it is not             registered.
   
+--------------------------------------------------------------------------------------------------
+### References
+
+ * Florian Schroff, Dmitry Kalenichenko, James Philbin (2015). [FaceNet: A Unified Embedding for Face Recognition and Clustering](https://arxiv.org/pdf/1503.03832.pdf)
+ * Yaniv Taigman, Ming Yang, Marc'Aurelio Ranzato, Lior Wolf (2014). [DeepFace: Closing the gap to human-level performance in face verification](https://research.fb.com/wp-content/uploads/2016/11/deepface-closing-the-gap-to-human-level-performance-in-face-verification.pdf)
+ * The pretrained model we use is inspired by Victor Sy Wang's implementation and was loaded using his code: [https://github.com/iwantooxxoox/Keras-OpenFace](https://github.com/iwantooxxoox/Keras-OpenFace)
+ * Our implementation also took a lot of inspiration from the official FaceNet github repository: [https://github.com/davidsandberg/facenet](https://github.com/davidsandberg/facenet)
