@@ -1,3 +1,4 @@
+---------------------------------------------------------------------------------------------------
 # Realtime Face Recognition
 
 Face recognition problems commonly fall into two categories:
@@ -7,24 +8,40 @@ Face recognition problems commonly fall into two categories:
  
 FaceNet learns a neural network that encodes a face image into a vector of 128 numbers. By comparing two such vectors, you can then determine if two pictures are of the same person.
 
-
+--------------------------------------------------------------------------------------------------
 ### Encoding face images into a 128-dimensional vector
 
+--------------------------------------------------------------------------------------------------
 #### Using an ConvNet to compute encodings
+
 
 The FaceNet model takes a lot of data and a long time to train. So following common practice in applied deep learning settings, let's just load weights that someone else has already trained. The network architecture follows the Inception model from [Szegedy et al.](https://arxiv.org/abs/1409.4842). We have provided an inception network implementation. You can look in the file inception_blocks.py
 
 The key things you need to know are:
 
- * This network uses 96x96 dimensional RGB images as its input. Specifically, inputs a face image (or batch of $m$ face       images) as a tensor of shape $(m, n_C, n_H, n_W) = (m, 3, 96, 96)$
- * It outputs a matrix of shape $(m, 128)$ that encodes each input face image into a 128-dimensional vector
- 
- 
+ * This network uses 96x96 dimensional RGB images as its input. Specifically, inputs a face image (or batch of m face       images) as a tensor of shape (m, n_C, n_H, n_W) = (m, 3, 96, 96)
+ * It outputs a matrix of shape (m, 128) that encodes each input face image into a 128-dimensional vector
+
+--------------------------------------------------------------------------------------------------
+#### Expected Output
+
+By using a 128-neuron fully connected layer as its last layer, the model ensures that the output is an encoding vector of size 128. You then use the encodings the compare two face images as follows:
+
+
+<p align="center"><img width="40%" src="https://github.com/SHANK885/realtime_face_recognition/blob/master/images/distance_kiank.png" /></p>
+
+So, an encoding is a good one if:
+
+ * The encodings of two images of the same person are quite similar to each other
+ * The encodings of two images of different persons are very different
+
+--------------------------------------------------------------------------------------------------
 ### Platform Secification:
 
   * Ubuntu 18.04
 
 
+--------------------------------------------------------------------------------------------------
 ### Requirements:
   
   * tensorflow==1.15.0
@@ -32,13 +49,15 @@ The key things you need to know are:
   * Python==3.7.4
   * OpenCV==4.1.2
   * NumPy==1.17.2
-  
-  
+ 
+ 
+-------------------------------------------------------------------------------------------------- 
 ### Setup
 
   * Clone this [repository](https://github.com/SHANK885/realtime_face_recognition.git)
   
   
+--------------------------------------------------------------------------------------------------  
 ### Enroll a new face using webcam.
 
   1. Go inside realtime_face_recognition directory.
@@ -58,6 +77,7 @@ The key things you need to know are:
         realtime_face_recognition/database/embeddings/face_embeddings.json
 
 
+--------------------------------------------------------------------------------------------------
 ### Where the image is stored ?
 
   * The cropped faces of all te enrolled members is stored in:
@@ -65,12 +85,14 @@ The key things you need to know are:
   * The embeddings of all the enrolled faces is present in:
     [realtime_face_recognition/database/embeddings/<emb> directory](https://github.com/SHANK885/realtime_face_recognition/tree/master/database/embeddings)
   
-
+  
+--------------------------------------------------------------------------------------------------
 ### What is does?
 
 Our realtime face recognition is able to recognize the faces of all the members that is enrolled in the database. However, if a face is not enrolled it will make it as unknown.
 
 
+--------------------------------------------------------------------------------------------------
 ### How to run FaceNet Realtime Recognition.
 
   * Enroll the faces you want by following the above steps.
