@@ -28,12 +28,17 @@ The key things you need to know are:
 By using a 128-neuron fully connected layer as its last layer, the model ensures that the output is an encoding vector of size 128. You then use the encodings the compare two face images as follows:
 
 
-<p align="center"><img width="40%" src="https://github.com/SHANK885/realtime_face_recognition/blob/master/images/distance_kiank.png" /></p>
+<p align="center"><img width="100%" src="https://github.com/SHANK885/realtime_face_recognition/blob/master/images/distance_kiank.png" /></p>
 
 So, an encoding is a good one if:
 
  * The encodings of two images of the same person are quite similar to each other
  * The encodings of two images of different persons are very different
+
+The triplet loss function formalizes this, and tries to "push" the encodings of two images of the same person (Anchor and Positive) closer together, while "pulling" the encodings of two images of different persons (Anchor, Negative) further apart.
+
+<p align="center"><img width="100%" src="https://github.com/SHANK885/realtime_face_recognition/blob/master/images/triplet_comparison.png" /></p>
+
 
 --------------------------------------------------------------------------------------------------
 ### Platform Secification:
