@@ -1,0 +1,46 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_FILESEP	slash	/slash or backslash/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	/9fcdb065/
+FRmodel	realtime_recognition.py	/^FRmodel = faceRecoModel(input_shape=(3, 96, 96))$/;"	v
+K	inception_blocks_v2.py	/^from keras import backend as K$/;"	x
+K	realtime_recognition.py	/^from keras import backend as K$/;"	x
+LRN2D	fr_utils.py	/^def LRN2D(x):$/;"	f
+WEIGHTS	fr_utils.py	/^WEIGHTS = [$/;"	v
+_FLOATX	fr_utils.py	/^_FLOATX = 'float32'$/;"	v
+concatenate	fr_utils.py	/^def concatenate(tensors, axis=-1):$/;"	f
+conv2d_bn	fr_utils.py	/^def conv2d_bn(x,$/;"	f
+conv_shape	fr_utils.py	/^conv_shape = {$/;"	v
+faceRecoModel	inception_blocks_v2.py	/^def faceRecoModel(input_shape):$/;"	f
+img_to_encoding	fr_utils.py	/^def img_to_encoding(image_path, model):$/;"	f
+inception_block_1a	inception_blocks_v2.py	/^def inception_block_1a(X):$/;"	f
+inception_block_1b	inception_blocks_v2.py	/^def inception_block_1b(X):$/;"	f
+inception_block_1c	inception_blocks_v2.py	/^def inception_block_1c(X):$/;"	f
+inception_block_2a	inception_blocks_v2.py	/^def inception_block_2a(X):$/;"	f
+inception_block_2b	inception_blocks_v2.py	/^def inception_block_2b(X):$/;"	f
+inception_block_3a	inception_blocks_v2.py	/^def inception_block_3a(X):$/;"	f
+inception_block_3b	inception_blocks_v2.py	/^def inception_block_3b(X):$/;"	f
+load_dataset	fr_utils.py	/^def load_dataset():$/;"	f
+load_weights	fr_utils.py	/^def load_weights():$/;"	f
+load_weights_from_FaceNet	fr_utils.py	/^def load_weights_from_FaceNet(FRmodel):$/;"	f
+loss	triplet_loss.py	/^    loss = triplet_loss(y_true, y_pred)$/;"	v
+np	fr_utils.py	/^import numpy as np$/;"	I
+np	inception_blocks_v2.py	/^import numpy as np$/;"	I
+np	realtime_recognition.py	/^import numpy as np$/;"	I
+pd	realtime_recognition.py	/^import pandas as pd$/;"	I
+plt	fr_utils.py	/^import matplotlib.pyplot as plt$/;"	I
+shape	fr_utils.py	/^def shape(x):$/;"	f
+square	fr_utils.py	/^def square(x):$/;"	f
+tf	fr_utils.py	/^import tensorflow as tf$/;"	I
+tf	inception_blocks_v2.py	/^import tensorflow as tf$/;"	I
+tf	realtime_recognition.py	/^import tensorflow as tf$/;"	I
+tf	triplet_loss.py	/^import tensorflow as tf$/;"	I
+triplet_loss	triplet_loss.py	/^def triplet_loss(y_true, y_pred, alpha=0.2):$/;"	f
+variable	fr_utils.py	/^def variable(value, dtype=_FLOATX, name=None):$/;"	f
+y_pred	triplet_loss.py	/^    y_pred = (tf.random_normal([3, 128], mean=6, stddev=0.1, seed=1),$/;"	v
+y_true	triplet_loss.py	/^    y_true = (None, None, None)$/;"	v
+zeros	fr_utils.py	/^def zeros(shape, dtype=_FLOATX, name=None):$/;"	f
