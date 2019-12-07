@@ -78,7 +78,7 @@ The triplet loss function formalizes this, and tries to "push" the encodings of 
   The cropped and aligned face will be saved to:
         realtime_face_recognition/database/images/ directory
   
-  The 512 D face embedding vector will be added to:
+  The 128 D face embedding vector will be added to:
         realtime_face_recognition/database/embeddings/face_embeddings.json
 
 
